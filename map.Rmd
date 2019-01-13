@@ -1,0 +1,25 @@
+---
+title: "8th Natural Wonder of the World"
+author: "Janina Lazo-Cruz"
+date: "January 12, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(leaflet)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Banaue Rice Terraces
+
+This is a map that shows the location of Banaue Rice Terraces in the Philippines. 
+
+
+```{r banaue}
+BRT <- c("<a href= 'http://www.banaueterraces.com' >Banaue Rice Terraces</a>")
+leaflet() %>%
+addTiles() %>%
+addMarkers(lat=16.935385, lng=121.05762, popup = BRT)
+        
+```
